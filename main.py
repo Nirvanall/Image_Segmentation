@@ -20,7 +20,8 @@ def main(config):
     config.result_path = os.path.join(config.result_path,config.model_type)
     if not os.path.exists(config.result_path):
         os.makedirs(config.result_path)
-    
+        
+    '''
     lr = random.random()*0.0005 + 0.0000005
     augmentation_prob= random.random()*0.7
     epoch = random.choice([100,150,200,250])
@@ -31,7 +32,7 @@ def main(config):
     config.num_epochs = epoch
     config.lr = lr
     config.num_epochs_decay = decay_epoch
-
+    '''
     print(config)
         
     train_loader = get_loader(image_path=config.train_path,

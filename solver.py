@@ -59,7 +59,7 @@ class Solver(object):
 		elif self.model_type =='R2U_Net':
 			self.unet = R2U_Net(img_ch=3,output_ch=1,t=self.t)
 		elif self.model_type =='AttU_Net':
-			self.unet = AttU_Net(img_ch=3,output_ch=1)
+			self.unet = AttU_Net(img_ch=self.img_ch,output_ch=1)
 		elif self.model_type == 'R2AttU_Net':
 			self.unet = R2AttU_Net(img_ch=3,output_ch=1,t=self.t)
 			

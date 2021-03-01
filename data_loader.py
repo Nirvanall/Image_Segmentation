@@ -18,7 +18,7 @@ class ImageFolder(data.Dataset):
 		self.image_paths = list(map(lambda x: os.path.join(root, x), os.listdir(root)))
 		self.image_size = image_size
 		self.mode = mode
-		self.RotationDegree = [0,90,180,270]
+		self.RotationDegree = [0, 90, 180, 270]
 		self.augmentation_prob = augmentation_prob
 		print("image count in {} path :{}".format(self.mode,len(self.image_paths)))
 
